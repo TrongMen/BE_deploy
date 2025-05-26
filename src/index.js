@@ -54,7 +54,9 @@ app.use(morgan('combined'))
 
 // Routes init
 route(app)
-
+app.get("/", (req, res) => {
+    res.send("API đang chạy!");
+})
 // Kết nối DB và khởi động server
 db.connect()
     .then(() => {
