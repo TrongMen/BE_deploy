@@ -13,13 +13,13 @@ import { error } from 'console'
 // require('dotenv').config()
 import { io } from '../../index.js'
 AWS.config.update({
-    accessKeyId: process.env.Acces_Key,
-    secretAccessKey: process.env.Secret_Acces_Key,
-    region: process.env.Region,
+    accessKeyId: process.env.ACCES_KEY,
+    secretAccessKey: process.env.SECRET_ACCES_KEY,
+    region: process.env.REGION,
 })
 
 const S3 = new AWS.S3()
-const bucketname = process.env.s3_bucket
+const bucketname = process.env.S3_BUCKET
 // console.log('bucketname nhận là : ', bucketname)
 
 const storage = multer.memoryStorage({

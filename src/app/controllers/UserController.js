@@ -12,13 +12,13 @@ import uploadDefaultAvatar from '../../util/uploadDefaultAvatar.js'
 // require('dotenv').config()
 import { v4 as uuidv4 } from 'uuid'
 AWS.config.update({
-    accessKeyId: process.env.Acces_Key,
-    secretAccessKey: process.env.Secret_Acces_Key,
-    region: process.env.Region,
+    accessKeyId: process.env.ACCES_KEY,
+    secretAccessKey: process.env.SECRET_ACCES_KEY,
+    region: process.env.REGION,
 })
 
 const S3 = new AWS.S3()
-const bucketname = process.env.s3_bucket
+const bucketname = process.env.S3_BUCKET
 
 const storage = multer.memoryStorage({
     destination: function (req, file, callback) {

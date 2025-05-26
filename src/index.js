@@ -1,4 +1,8 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
 import express from 'express'
+
 import morgan from 'morgan'
 import methodOverride from 'method-override'
 import cors from 'cors'
@@ -13,7 +17,7 @@ import route from './routes/index.js'
 import db from './config/db/index.js'
 
 const app = express()
-const port = 3001
+const port = process.env.PORT || 3002
 const server = createServer(app)
 
 // Khởi tạo Socket.IO
